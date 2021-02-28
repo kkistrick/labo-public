@@ -1,0 +1,125 @@
+@font-face {
+ font-family: "cousine";
+ src: url("Fonts/Cousine-Regular.ttf");
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "cousine";
+}
+
+nav{
+  padding: 1px;
+  border: 1px solid black;
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+.contenu{
+  /* background-image: linear-gradient(to top, #000029 0%, #390052 100%); */
+  background-color:  #000029;
+  font-family: "cousine";
+  color: white;
+  height: 90vh;
+  width: 100%;
+}
+.logo{
+  position: fixed;
+  top: 2vh;
+  left: 5vh;
+  height: 15%;
+  width: auto;
+}
+.phrase-site{
+  position: fixed;
+  top:5vh;
+  right: 5vh;
+}
+.presentation{
+  padding-top: 10vh;
+}
+.presentation h1,h2{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 3vh;
+}
+h1{
+  font-size: 4em;
+    font-family: "cousine";
+}
+h2{
+  font-size: 1.5em;
+}
+.lien-question{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 10vh;
+  width: 100%;
+  font-size: 1.5em;
+
+}
+.lien-question1{
+  display: flex;
+  flex-direction: column;
+  padding-left: 15%;
+  padding-right: 10%;
+
+  width: 50%;
+}
+.lien-question2{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 5%;
+  width: 50%;
+}
+.lien-last-question{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 1.5em;
+  padding-top: 3%;
+}
+.lien-question a{
+  padding-top: 3%;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-style: 4em;
+}
+.recherche-menu{
+    display: flex;
+
+    align-content: center;
+    height: 50%;
+    padding-top: 0.5%;
+    padding-right:  1%;
+    padding-left:  1%;
+
+}
+.recherche-menu input{
+  width: 90%;
+  margin-right: 0.4%;
+}
+.recherche-menu button{
+  width: 10%;
+}
+.text-fin{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 0.25%;
+}
+input[type="text"]
+{
+    font-size:1.75em;
+}
