@@ -1,12 +1,13 @@
+/*####################### RESET ##################################*/
+
 *{
   margin: 0;
   padding: 0;
 }
 body, html {
   height: 100%;
-overflow-x: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-
 }
 
 body::-webkit-scrollbar {
@@ -23,331 +24,54 @@ a, a:hover, a:visited, a:active {
 p{
   letter-spacing: 0.2vw;
 }
-/* Hide scrollbar for IE, Edge and Firefox */
+
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
+  /*enlever les scrollbar */
+  -ms-overflow-style: none;  /* IE et Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.contenu-1{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("../images/home.jpg");
-  width: 100%;
-  height: 1000vh;
+/*#############################################################################*/
+/*####################### PAGE DE CHARGEMENT ##################################*/
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 102%;
-
-}
-.contenu-1-1{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-direction: column;
+.chargement{
+  text-align: center;
+  background-color: black;
+  width: 100vw;
   height: 100vh;
-  /*filter: drop-shadow(0 0 1vh black);*/
-  margin-bottom: 40vh;
-  width: 70%;
-  padding-top: 0%;
-  animation: 1s ease  me;
-}
-.contenu-1-1 h1{
-
-  opacity: 1;
-  font-size: 5em;
-}
-.contenu-1-1 h1,h2{
-  text-align: center;
-
-}
-.contenu-1-1 h2{
-  padding-top: 5%;
-  font-size: 2em;
-}
-.contenu-2{
-
-  width: 30%;
-  height: 89vh;
-}
-.contenu-4{
-  margin-top: 101vh;
-  filter: drop-shadow(0 0 0.5vh black);
-  background: rgba(0, 0, 0, 0.6);
-  border: 0.5vh solid sandybrown;
-  width: 69%;
-  height: 99vh;
-  display: flex;
-  flex-wrap:wrap;
-}
-.contenu-4 h1{
-  width: 100%;
-  height: 10%;
-  padding-top: 5%;
-  margin: 0;
-  font-size: 3em;
-}
-.contenu-4 h1, .contenu-4 h2, .contenu-4 p {
-  background-image: url("../images/home.jpg");
-  background-attachment: fixed;
-  background-size: cover ;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  text-align: center;
-}
-
-.contenu-4 .pro-div,.scol-div{
-  padding-top: 2%;
-  width: 50%;
-  height: 90%;
-}
-.pro-div-chemin{
-  width: 90%;
-  height: 75%;
-  padding: 3% 0 0 10%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.pro-div-chemin2{
-  border-left: 1px solid sandybrown;
-}
-.pro-div-chemin-contenu{
-  height: 24%;
-}
-.pro-div-chemin-contenu-img{
-  width: 25%;
-}
-.pro-div-chemin-contenu-text{
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  padding-left: 5%;
-  width: 65%;
-}
-.pro-div-chemin-contenu img{
-  height: 100%;
-
-}
-.scol-div-chemin{
-  width: 90%;
-  height: 75%;
-  padding:  0 0 0 10%;
-  display: flex;
-  flex-wrap: wrap;
-  border-left: 1px solid sandybrown;
-}
-.scol-div-chemin-contenu{
-  width: 45%;
-  height: 32.5%;
-}
-.scol-div-chemin-contenu img{
-  width: 80%;
-  height: 50%;
-}
-.scol-div-chemin-contenu-img{
-  display: flex;
-  align-items: center;
-  width: 25%;
-}
-.scol-div-chemin-contenu-text{
-
-  display: flex;
-  align-items: center;
-  width: 65%;
-}
-.pro-div-chemin-contenu p{
- font-size: 0.90em;
-  text-align: justify;
-}
-.scol-div-chemin-contenu p{
-  font-size: 1em;
-  text-align: left;
-}
-.contenu-5{
-
-  margin-top: 50vh;
-  width: 72%;
-  height: 149vh;
-}
-.contenu-7{
-  filter: drop-shadow(0 0 0.5vh black);
-  background: rgba(0, 0, 0, 0.6);
-  border: 0.5vh solid sandybrown;
-  margin-top: 101vh;
-  width: 72%;
-  height: 85vh;
-  color: sandybrown;
-  padding: 0 2% 0 2%;
-}
-.contenu-7 h1{
-  font-size: 3em;
-  padding-top: 3%;
-  text-align: center;
-}
-.contenu-7 h1,.contenu-7 h2,.contenu-7 p {
-  background-image: url("../images/home.jpg");
-  background-attachment: fixed;
-  background-size: cover ;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-.service-div{
-  display: flex;
-  text-align: center;
-  justify-items: center;
-}
-.contenu-7 h2{
-
-  font-size: 1.7em;
-  padding: 0 10% 0 10%;
-  text-align: center;
-}
-.contenu-7 img{
-  width: 80%;
-}
-.contenu-7 p{
-  justify-items: center;
-  padding: 5%;
-}
-.service-contenu-expli{
-  transition: transform 1s;
-  margin-top:10%;
-}
-.service-contenu-expli:hover{
-  transform: scale(1.05);
-}
-.service-contenu{
-
-  padding-top: 5%;
-  width: 100%;
-}
-.ligne{
-  width: 100%;
-  height: 72vh;
-  display: flex;
-
-}
-.service-contenu-expli{
-
-  border-left: 1px solid sandybrown;
-  border-right: 1px solid sandybrown;
-}
-.subprojet h1,p,li,ul{
-  background-image: url("../images/home.jpg");
-  background-attachment: fixed;
-  background-size: cover ;
-
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-.subprojet img{
-  width: 20vw;
-  height: 20vh;
- padding-top: 8%;
-}
-.logo-img:hover{
-  transform: rotateY(360deg);
-}
-.logo-img{
-  transition: 1.5s  ;
-  transform: rotateY(0deg);
-}
-.subprojet h1{
-  padding-top: 4%;
-}
-.subprojet p{
-  width: 80%;
-  padding-top: 4%;
-}
-.subprojet ul{
-  padding-top: 4%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.subprojet li{
-
-  list-style: none;
-  margin-right: 1vw;
-}
-.subprojet:hover{
-  cursor: crosshair;
-
-  transform: scale(1.05);
-}
-.ctn{
-  transition: 1.5s margin-right;
-}
-.margectn{
-
-  margin-right: 15%;
-}
-.subprojet{
-  transition: 0.5s ease-in-out;
   color: white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-  margin: 5vh;
-  width: 100%;
-  filter: drop-shadow(0 0 0.5vh black);
-  background: rgba(0, 0, 0, 0.6);
-  border: 0.5vh solid sandybrown;
-}
-
-.presentation-content{
-  padding-top: 15%;
-  display: flex;
   justify-content: center;
   align-items: center;
-}
-.contenu-2 h1{
-  background-image: url("../images/home.jpg");
-  background-attachment: fixed;
-  background-size: cover ;
-  padding-top: 10%;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  text-align: center;
-  font-size: 3em;
+  font-size: 5em;
+  z-index: 99999;
 }
 
-.me{
+/*#############################################################################*/
 
-  width: auto;
-  height: 60vh;
- }
-@keyframes me {
-  from { padding-top: 25%;
-    opacity: 0;
-    }
-  to   { padding-top: 0%;
-        opacity: 1;
-    }
-}
-.contenu-2 p{
-  opacity: 1;
-}
-.contenu-3{
-  border-top: 0.5vh solid black;
-  background-image: url("../images/contact3.jpg");
-  /*background-attachment: fixed;*/
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  background-color: black;
-  color: black;
+/*################################ MENU #######################################*/
+
+nav{
+  background: rgba(0,0,0,0.8);
+  position: absolute;
   width: 100%;
+  top: 0;
+  right: 20%;
   height: 100vh;
+  max-height: 300vh;
+  transform: translate3d(130%, 0, 0);
+  transition: transform 1.5s ease;
+  z-index: 1;
+
 }
+nav:hover{
+  cursor: url('../images/cu4.png'),pointer;
+}
+.avance{
+  transform: translate3d(105%, 0, 0);
+  transition: transform 1.5s ease;
+}
+/*#################### Boutton Croix menu #######################*/
+
 .croix-menu{
   position: fixed;
   top: 5vh;
@@ -366,7 +90,6 @@ body {
   transform: rotate(180deg) ;
 }
 .barre-haut{
-
   -webkit-transition: 0.70s;
   -moz-transition: 0.70s;
   -ms-transition: 0.70s;
@@ -389,24 +112,6 @@ body {
   height: 40%;
   background-color: black;
 
-}
-
-nav{
-  background: rgba(0,0,0,0.8);
-  position: absolute;
-  width: 100%;
-  top: 0;
-  right: 20%;
-  height: 100vh;
-  max-height: 300vh;
-  transform: translate3d(130%, 0, 0);
-  transition: transform 1.5s ease;
-  z-index: 1;
-
-}
-.avance{
-  transform: translate3d(105%, 0, 0);
-  transition: transform 1.5s ease;
 }
 
 .clicked{
@@ -436,30 +141,10 @@ nav{
   background-color: sandybrown;
 
 }
-.logo{
-  height: 15vh;
-  width: auto;
-}
-.contenu-3 h1{
-  font-size: 3.5em;
-  margin-top: 2%;
-}
-.reseaux img{
- width: 100%;
-  height: auto;
-}
-.test{
-  margin-right: 25%;
-}
 
-.reseaux{
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  width: 50vh;
-  height: 50vh;
+/*###############################################################*/
+/*################### lien du menu ouvert #######################*/
 
-}
 #liens-menu{
   display: flex;
   width: 14%;
@@ -472,28 +157,149 @@ nav{
 #liens-menu a{
   color: sandybrown;
   margin-bottom: 5vh;
- }
+}
 #liens-menu a:hover{
   cursor: url('../images/cu4.png'),pointer;
 
 }
-nav:hover{
-  /*cursor: url("../images/contact2.png"),auto;*/
-  cursor: url('../images/cu4.png'),pointer;
-  /*border-bottom: 0.5vh solid white;*/
+
+.span-lien{
+  letter-spacing: 0;
 }
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+.span-lien span {
+  overflow: hidden;
+  transition: transform 150ms ease-in-out;
+  transform-origin: bottom left;
+  display: inline-block;
+  transform: rotate(0deg);
+}
+.span-lien:hover span {
+  overflow: hidden;
+  transform: rotate(8deg);
+}
+.span-lien:hover span:nth-child(1) {
+  transition-delay: 0ms;
+}
+.span-lien:hover span:nth-child(2) {
+  transition-delay: 100ms;
+}
+.s:hover span:nth-child(3) {
+  transition-delay: 200ms;
+}
+.span-lien:hover span:nth-child(4) {
+  transition-delay: 300ms;
+}
+.span-lien:hover span:nth-child(5) {
+  transition-delay: 400ms;
+}
+.span-lien:hover span:nth-child(6) {
+  transition-delay: 500ms;
+}
+.span-lien:hover span:nth-child(7) {
+  transition-delay: 600ms;
+}
+.span-lien:hover span:nth-child(8) {
+  transition-delay: 700ms;
+}
+.span-lien:hover span:nth-child(9) {
+  transition-delay: 800ms;
+}
+.span-lien:hover span:nth-child(10) {
+  transition-delay: 900ms;
+}
+.span-lien:hover span:nth-child(11) {
+  transition-delay: 1000ms;
+}
+.span-lien:hover span:nth-child(12) {
+  transition-delay: 1100ms;
 }
 
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-
-  color: white;
+/*###############################################################*/
+/*##############################################################################*/
+/*####################### CONTENU DE LA PAGE ###################################*/
+.ctn-centrer-colone{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.ctn{
+  /*marge de tout le contenu quand le menu est ouvert*/
+  transition: 1.5s margin-right;
+}
+.ctn-contoure-article{
   filter: drop-shadow(0 0 0.5vh black);
   background: rgba(0, 0, 0, 0.6);
   border: 0.5vh solid sandybrown;
+}
+.margectn{
+  margin-right: 15vw;
+}
+/*############################# PARRALAX  #######################*/
+.paral{
+  background-image: url("../images/home.jpg");
+  width: 100%;
+  height: 1000vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+/*###############################################################*/
+/*################### TItre D'acceuil ###########################*/
+
+.titre-acceuil{
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  /*filter: drop-shadow(0 0 1vh black);*/
+  margin-bottom: 40vh;
+  width: 70%;
+  padding-top: 0%;
+  animation: 1s ease  me;
+}
+.titre-acceuil h1{
+  opacity: 1;
+  font-size: 5em;
+}
+.titre-acceuil h1,h2{
+  text-align: center;
+
+}
+.titre-acceuil h2{
+  padding-top: 5%;
+  font-size: 2em;
+}
+/*###############################################################*/
+/*##################### Presentation  ###########################*/
+.present{
+  width: 30%;
+  height: 89vh;
+}
+
+.present h1{
+  background-image: url("../images/home.jpg");
+  background-attachment: fixed;
+  background-size: cover ;
+  padding-top: 10%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  font-size: 3em;
+}
+.present p{
+  opacity: 1;
+}
+
+
+.flip-card {
+  perspective: 1000px; /* effet  3D */
+}
+
+/* le container du devant et derriere de la carte*/
+.flip-card-inner {
+  color: white;
   position: relative;
   width: 100%;
   height: 100%;
@@ -502,14 +308,13 @@ nav:hover{
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+/* rotation de la carte au survol */
 .flip-card:hover .flip-card-inner {
-
   transform: rotateY(-180deg);
 }
-
+/*cacher les face quand la carte tourne*/
 .flip-card:hover .flip-card-front{
-visibility: hidden;
+  visibility: hidden;
 }
 .flip-card:hover .flip-card-back{
   -webkit-backface-visibility: visible; /* Safari */
@@ -517,7 +322,7 @@ visibility: hidden;
   visibility: visible;
 }
 
-/* Position the front and back side */
+/* Position des face avant et arriere */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -526,11 +331,9 @@ visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
 }
 
-/* Style the back side */
 .flip-card-back {
   display: flex;
   flex-direction: column;
@@ -546,81 +349,237 @@ visibility: hidden;
 .top-flip-card-back{
   margin-top: 10%;
 }
-.test2{
+
+.presentation-content{
+  padding-top: 15%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
-  width: 60%;
-  height: 80%;
-  margin-top: 2%;
-  /*!*background-color: white;*!*/
-  filter: drop-shadow(0 0 1vh black);
-  /*background: rgba(255, 255, 255, 0.2);*/
-    background-image: url("../images/tbcontact.png");
-    background-size: cover;
-  background-position: center center;
 }
 
+.moi-image-card{
 
-.mydiv{
-    position: absolute;
+  width: auto;
+  height: 60vh;
 }
-.s span {
-   overflow: hidden;
-   transition: transform 150ms ease-in-out;
-   transform-origin: bottom left;
-   display: inline-block;
- }
+@keyframes me {
+  from { padding-top: 25%;
+    opacity: 0;
+  }
+  to   { padding-top: 0%;
+    opacity: 1;
+  }
+}
 .text-justify{
   width: 80%;
   text-align: center;
 }
-.s{
-  letter-spacing: 0;
+/*###############################################################*/
+/*########################## Parcours ###########################*/
+.parco{
+  margin-top: 101vh;
+  width: 69%;
+  height: 99vh;
+  display: flex;
+  flex-wrap:wrap;
 }
-.s span {
-  transform: rotate(0deg);
+.parco h1{
+  width: 100%;
+  height: 10%;
+  padding-top: 5%;
+  margin: 0;
+  font-size: 3em;
 }
-.s:hover span {
-  overflow: hidden;
-  transform: rotate(8deg);
+.parco h1, .parco h2, .parco p {
+  background-image: url("../images/home.jpg");
+  background-attachment: fixed;
+  background-size: cover ;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
 }
-.s:hover span:nth-child(1) {
-  transition-delay: 0ms;
+
+.parco .pro,.scol{
+  padding-top: 2%;
+  width: 50%;
+  height: 90%;
 }
-.s:hover span:nth-child(2) {
-  transition-delay: 100ms;
+
+.pro-chemin{
+  width: 90%;
+  height: 75%;
+  padding: 3% 0 0 10%;
+  display: flex;
+  flex-wrap: wrap;
 }
-.s:hover span:nth-child(3) {
-  transition-delay: 200ms;
+.pro-chemin2{
+  border-left: 1px solid sandybrown;
 }
-.s:hover span:nth-child(4) {
-  transition-delay: 300ms;
+.pro-chemin-contenu{
+  height: 24%;
 }
-.s:hover span:nth-child(5) {
-  transition-delay: 400ms;
+.pro-chemin-contenu-img{
+  width: 25%;
 }
-.s:hover span:nth-child(6) {
-  transition-delay: 500ms;
+.pro-chemin-contenu-text{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-left: 5%;
+  width: 65%;
 }
-.s:hover span:nth-child(7) {
-  transition-delay: 600ms;
+.pro-chemin-contenu p{
+  font-size: 0.90em;
+  text-align: justify;
 }
-.s:hover span:nth-child(8) {
-  transition-delay: 700ms;
+.pro-chemin-contenu img{
+  height: 100%;
 }
-.s:hover span:nth-child(9) {
-  transition-delay: 800ms;
+.scol-chemin{
+  width: 90%;
+  height: 75%;
+  padding:  0 0 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1px solid sandybrown;
 }
-.s:hover span:nth-child(10) {
-  transition-delay: 900ms;
+.scol-chemin-contenu{
+  width: 45%;
+  height: 32.5%;
 }
-.s:hover span:nth-child(11) {
-  transition-delay: 1000ms;
+.scol-chemin-contenu img{
+  width: 80%;
+  height: 50%;
 }
-.s:hover span:nth-child(12) {
-  transition-delay: 1100ms;
+.scol-chemin-contenu-img{
+  display: flex;
+  align-items: center;
+  width: 25%;
 }
+.scol-chemin-contenu-text{
+  display: flex;
+  align-items: center;
+  width: 65%;
+}
+
+.scol-chemin-contenu p{
+  font-size: 1em;
+  text-align: left;
+}
+/*###############################################################*/
+/*########################## Services ###########################*/
+
+.servic{
+  margin-top: 101vh;
+  width: 72%;
+  height: 90vh;
+  color: sandybrown;
+  padding: 0 2% 0 2%;
+}
+.servic h1{
+  font-size: 3em;
+  padding-top: 3%;
+  text-align: center;
+}
+.servic h1,.servic h2,.servic p {
+  background-image: url("../images/home.jpg");
+  background-attachment: fixed;
+  background-size: cover ;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.service{
+  display: flex;
+  text-align: center;
+  justify-items: center;
+}
+.servic h2{
+  font-size: 1.7em;
+  padding: 0 10% 0 10%;
+  text-align: center;
+}
+.servic img{
+  width: 80%;
+}
+.servic p{
+  justify-items: center;
+  padding: 5%;
+}
+.service-contenu-expli{
+  transition: transform 1s;
+  margin-top:10%;
+}
+.service-contenu-expli:hover{
+  transform: scale(1.05);
+}
+.service-contenu{
+  padding-top: 5%;
+  width: 100%;
+}
+.service-contenu-expli{
+  border-left: 1px solid sandybrown;
+  border-right: 1px solid sandybrown;
+}
+/*###############################################################*/
+/*########################### Project ###########################*/
+.ligne{
+  width: 100%;
+  height: 72vh;
+  display: flex;
+
+}
+.projet{
+  margin-top: 50vh;
+  width: 72%;
+  height: 149vh;
+}
+.bulle-projet h1,p,li,ul{
+  background-image: url("../images/home.jpg");
+  background-attachment: fixed;
+  background-size: cover ;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.bulle-projet img{
+  width: 20vw;
+  height: 20vh;
+  padding-top: 8%;
+}
+
+.bulle-projet h1{
+  padding-top: 4%;
+}
+.bulle-projet p{
+  width: 80%;
+  padding-top: 4%;
+}
+.bulle-projet ul{
+  padding-top: 4%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.bulle-projet li{
+
+  list-style: none;
+  margin-right: 1vw;
+}
+.bulle-projet:hover{
+  cursor: crosshair;
+
+  transform: scale(1.05);
+}
+
+
+.bulle-projet{
+  transition: 0.5s ease-in-out;
+  color: white;
+  justify-items: center;
+  text-align: center;
+  margin: 5vh;
+  width: 100%;
+}
+
 .deployment{
   color: orange;
 
@@ -651,21 +610,19 @@ visibility: hidden;
   -webkit-text-fill-color: green;
   -webkit-background-clip: initial;
 }
-.contenu-6{
+
+/*###############################################################*/
+/*{{{{{{{{################### Contact ###########################*/
+
+.contac{
   width: 50%;
   height: 80vh;
   margin-top: 52vh;
-  filter: drop-shadow(0 0 0.5vh black);
-  background: rgba(0, 0, 0, 0.6);
-  border: 0.5vh solid sandybrown;
-  display: flex;
   justify-items: center;
-  align-items: center;
-  flex-direction: column;
   color:sandybrown;
   padding-top: 5%;
 }
-.contenu-6 h1{
+.contac h1{
   font-size: 3em;
   background-image: url("../images/home.jpg");
   background-attachment: fixed;
@@ -699,8 +656,18 @@ visibility: hidden;
   margin-top: 15%;
 }
 .ligne-contact img{
- width: 100%;
+  width: 100%;
 }
 #content-holder{
   opacity: 0%;
 }
+
+.logo-img:hover{
+  transform: rotateY(360deg);
+}
+.logo-img{
+  transition: 1.5s  ;
+  transform: rotateY(0deg);
+}
+/*###############################################################*/
+/*##############################################################################*/

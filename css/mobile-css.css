@@ -1,0 +1,1367 @@
+
+/* Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+    /*####################### RESET ##################################*/
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body, html {
+        height: 100%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    a, a:hover, a:visited, a:active {
+        color: inherit;
+        text-decoration: none;
+    }
+    p{
+        letter-spacing: 0.2vw;
+    }
+
+    body {
+        /*enlever les scrollbar */
+        -ms-overflow-style: none;  /* IE et Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    /*#############################################################################*/
+    /*####################### PAGE DE CHARGEMENT ##################################*/
+
+    .chargement{
+        text-align: center;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5em;
+        z-index: 99999;
+    }
+
+    /*#############################################################################*/
+
+    /*################################ MENU #######################################*/
+
+    /*nav{*/
+    /*    background: rgba(0,0,0,0.8);*/
+    /*    position: absolute;*/
+    /*    width: 100%;*/
+    /*    top: 0;*/
+    /*    right: 20%;*/
+    /*    height: 100vh;*/
+    /*    max-height: 300vh;*/
+    /*    transform: translate3d(130%, 0, 0);*/
+    /*    transition: transform 1.5s ease;*/
+    /*    z-index: 1;*/
+
+    /*}*/
+    /*nav:hover{*/
+    /*    cursor: url('../images/cu4.png'),pointer;*/
+    /*}*/
+    /*.avance{*/
+    /*    transform: translate3d(105%, 0, 0);*/
+    /*    transition: transform 1.5s ease;*/
+    /*}*/
+    nav {
+        display: none;
+    }
+    /*#################### Boutton Croix menu #######################*/
+
+    .croix-menu{
+        position: fixed;
+        top: 5vh;
+        right: 5vh;
+        width: 5vh;
+        height: 1vh;
+        z-index: 20;
+    }
+    .croix-menu:hover{
+        transition: 1ms;
+    }
+    .croix-menu:hover .barre-haut{
+        transform: rotate(180deg) ;
+    }
+    .croix-menu:hover .barre-bas{
+        transform: rotate(180deg) ;
+    }
+    .barre-haut{
+        -webkit-transition: 0.70s;
+        -moz-transition: 0.70s;
+        -ms-transition: 0.70s;
+        -o-transition: 0.70s;
+        transition: 0.70s;
+        width: 100%;
+        height: 40%;
+        background-color: black;
+        margin-bottom: 0.5vh;
+
+    }
+    .barre-bas{
+
+        -webkit-transition: 0.70s;
+        -moz-transition: 0.70s;
+        -ms-transition: 0.70s;
+        -o-transition: 0.70s;
+        transition: 0.70s;
+        width: 100%;
+        height: 40%;
+        background-color: black;
+
+    }
+
+    .clicked{
+        -webkit-transition: 0.70s;
+        -moz-transition: 0.70s;
+        -ms-transition: 0.70s;
+        -o-transition: 0.70s;
+        -webkit-transform: rotate(405deg) translate(0,0.5vh);
+        -moz-transform: rotate(405deg) translate(0,0.5vh);
+        -o-transform: rotate(405deg) translate(0,0.5vh);
+        -ms-transform:rotate(405deg) translate(0,0.5vh);
+        transition: 0.70s;
+        transform: rotate(405deg) translate(0,0.5vh);
+        background-color: sandybrown;
+    }
+    .clicked2{
+        -webkit-transition: 0.70s;
+        -moz-transition: 0.70s;
+        -ms-transition: 0.70s;
+        -o-transition: 0.70s;
+        -webkit-transform: rotate(-45deg) translate(0,-0.5vh);
+        -moz-transform: rotate(-45deg) translate(0,-0.5vh);
+        -o-transform: rotate(-45deg) translate(0,-0.5vh);
+        -ms-transform:rotate(-45deg) translate(0,-0.5vh);
+        transition: 0.70s;
+        transform: rotate(-45deg) translate(0,-0.5vh);
+        background-color: sandybrown;
+
+    }
+
+    /*###############################################################*/
+    /*################### lien du menu ouvert #######################*/
+
+    #liens-menu{
+        display: flex;
+        width: 14%;
+        font-size: 1.5em;
+        flex-direction: column;
+        padding-top: 15%;
+        overflow: hidden;
+        text-align: center;
+    }
+    #liens-menu a{
+        color: sandybrown;
+        margin-bottom: 5vh;
+    }
+    #liens-menu a:hover{
+        cursor: url('../images/cu4.png'),pointer;
+
+    }
+
+    .span-lien{
+        letter-spacing: 0;
+    }
+    .span-lien span {
+        overflow: hidden;
+        transition: transform 150ms ease-in-out;
+        transform-origin: bottom left;
+        display: inline-block;
+        transform: rotate(0deg);
+    }
+    .span-lien:hover span {
+        overflow: hidden;
+        transform: rotate(8deg);
+    }
+    .span-lien:hover span:nth-child(1) {
+        transition-delay: 0ms;
+    }
+    .span-lien:hover span:nth-child(2) {
+        transition-delay: 100ms;
+    }
+    .s:hover span:nth-child(3) {
+        transition-delay: 200ms;
+    }
+    .span-lien:hover span:nth-child(4) {
+        transition-delay: 300ms;
+    }
+    .span-lien:hover span:nth-child(5) {
+        transition-delay: 400ms;
+    }
+    .span-lien:hover span:nth-child(6) {
+        transition-delay: 500ms;
+    }
+    .span-lien:hover span:nth-child(7) {
+        transition-delay: 600ms;
+    }
+    .span-lien:hover span:nth-child(8) {
+        transition-delay: 700ms;
+    }
+    .span-lien:hover span:nth-child(9) {
+        transition-delay: 800ms;
+    }
+    .span-lien:hover span:nth-child(10) {
+        transition-delay: 900ms;
+    }
+    .span-lien:hover span:nth-child(11) {
+        transition-delay: 1000ms;
+    }
+    .span-lien:hover span:nth-child(12) {
+        transition-delay: 1100ms;
+    }
+
+    /*###############################################################*/
+    /*##############################################################################*/
+    /*####################### CONTENU DE LA PAGE ###################################*/
+    .ctn-centrer-colone{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .ctn{
+        /*marge de tout le contenu quand le menu est ouvert*/
+        transition: 1.5s margin-right;
+    }
+    .ctn-contoure-article{
+        filter: drop-shadow(0 0 0.5vh black);
+        background: rgba(0, 0, 0, 0.6);
+        border: 0.5vh solid sandybrown;
+    }
+    .margectn{
+        margin-right: 15vw;
+    }
+    /*############################# PARRALAX  #######################*/
+    .paral{
+        background-image: url("../images/home.jpg");
+        width: 100%;
+        height: 1000vh;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    /*###############################################################*/
+    /*################### TItre D'acceuil ###########################*/
+
+    .titre-acceuil{
+        align-content: center;
+        justify-content: center;
+        height: 100vh;
+        /*filter: drop-shadow(0 0 1vh black);*/
+        margin-bottom: 40vh;
+        width: 70%;
+        padding-top: 0%;
+        animation: 1s ease  me;
+    }
+    .titre-acceuil h1{
+        opacity: 1;
+        font-size: 5em;
+    }
+    .titre-acceuil h1,h2{
+        text-align: center;
+
+    }
+    .titre-acceuil h2{
+        padding-top: 5%;
+        font-size: 2em;
+    }
+    /*###############################################################*/
+    /*##################### Presentation  ###########################*/
+    .present{
+        width: 30%;
+        height: 89vh;
+    }
+
+    .present h1{
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        padding-top: 10%;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+        font-size: 3em;
+    }
+    .present p{
+        opacity: 1;
+    }
+
+
+    .flip-card {
+        perspective: 1000px; /* effet  3D */
+    }
+
+    /* le container du devant et derriere de la carte*/
+    .flip-card-inner {
+        color: white;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 1.5s;
+        transform-style: preserve-3d;
+    }
+
+    /* rotation de la carte au survol */
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(-180deg);
+    }
+    /*cacher les face quand la carte tourne*/
+    .flip-card:hover .flip-card-front{
+        visibility: hidden;
+    }
+    .flip-card:hover .flip-card-back{
+        -webkit-backface-visibility: visible; /* Safari */
+        backface-visibility:  visible;
+        visibility: visible;
+    }
+
+    /* Position des face avant et arriere */
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+    }
+
+    .flip-card-back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        color: white;
+        transform: rotateY(180deg);
+    }
+    .flip-card-back p{
+        padding-top: 5%;
+        font-size: 1.5em;
+    }
+    .top-flip-card-back{
+        margin-top: 10%;
+    }
+
+    .presentation-content{
+        padding-top: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .moi-image-card{
+
+        width: auto;
+        height: 60vh;
+    }
+    @keyframes me {
+        from { padding-top: 25%;
+            opacity: 0;
+        }
+        to   { padding-top: 0%;
+            opacity: 1;
+        }
+    }
+    .text-justify{
+        width: 80%;
+        text-align: center;
+    }
+    /*###############################################################*/
+    /*########################## Parcours ###########################*/
+    .parco{
+        margin-top: 101vh;
+        width: 69%;
+        height: 99vh;
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .parco h1{
+        width: 100%;
+        height: 10%;
+        padding-top: 5%;
+        margin: 0;
+        font-size: 3em;
+    }
+    .parco h1, .parco h2, .parco p {
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+    }
+
+    .parco .pro,.scol{
+        padding-top: 2%;
+        width: 50%;
+        height: 90%;
+    }
+
+    .pro-chemin{
+        width: 90%;
+        height: 75%;
+        padding: 3% 0 0 10%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pro-chemin2{
+        border-left: 1px solid sandybrown;
+    }
+    .pro-chemin-contenu{
+        height: 24%;
+    }
+    .pro-chemin-contenu-img{
+        width: 25%;
+    }
+    .pro-chemin-contenu-text{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        padding-left: 5%;
+        width: 65%;
+    }
+    .pro-chemin-contenu p{
+        font-size: 0.90em;
+        text-align: justify;
+    }
+    .pro-chemin-contenu img{
+        height: 100%;
+    }
+    .scol-chemin{
+        width: 90%;
+        height: 75%;
+        padding:  0 0 0 10%;
+        display: flex;
+        flex-wrap: wrap;
+        border-left: 1px solid sandybrown;
+    }
+    .scol-chemin-contenu{
+        width: 45%;
+        height: 32.5%;
+    }
+    .scol-chemin-contenu img{
+        width: 80%;
+        height: 50%;
+    }
+    .scol-chemin-contenu-img{
+        display: flex;
+        align-items: center;
+        width: 25%;
+    }
+    .scol-chemin-contenu-text{
+        display: flex;
+        align-items: center;
+        width: 65%;
+    }
+
+    .scol-chemin-contenu p{
+        font-size: 1em;
+        text-align: left;
+    }
+    /*###############################################################*/
+    /*########################## Services ###########################*/
+
+    .servic{
+        margin-top: 101vh;
+        width: 72%;
+        height: 90vh;
+        color: sandybrown;
+        padding: 0 2% 0 2%;
+    }
+    .servic h1{
+        font-size: 3em;
+        padding-top: 3%;
+        text-align: center;
+    }
+    .servic h1,.servic h2,.servic p {
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    .service{
+        display: flex;
+        text-align: center;
+        justify-items: center;
+    }
+    .servic h2{
+        font-size: 1.7em;
+        padding: 0 10% 0 10%;
+        text-align: center;
+    }
+    .servic img{
+        width: 80%;
+    }
+    .servic p{
+        justify-items: center;
+        padding: 5%;
+    }
+    .service-contenu-expli{
+        transition: transform 1s;
+        margin-top:10%;
+    }
+    .service-contenu-expli:hover{
+        transform: scale(1.05);
+    }
+    .service-contenu{
+        padding-top: 5%;
+        width: 100%;
+    }
+    .service-contenu-expli{
+        border-left: 1px solid sandybrown;
+        border-right: 1px solid sandybrown;
+    }
+    /*###############################################################*/
+    /*########################### Project ###########################*/
+    .ligne{
+        width: 100%;
+        height: 72vh;
+        display: flex;
+
+    }
+    .projet{
+        margin-top: 50vh;
+        width: 72%;
+        height: 149vh;
+    }
+    .bulle-projet h1,p,li,ul{
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    .bulle-projet img{
+        width: 20vw;
+        height: 20vh;
+        padding-top: 8%;
+    }
+
+    .bulle-projet h1{
+        padding-top: 4%;
+    }
+    .bulle-projet p{
+        width: 80%;
+        padding-top: 4%;
+    }
+    .bulle-projet ul{
+        padding-top: 4%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .bulle-projet li{
+
+        list-style: none;
+        margin-right: 1vw;
+    }
+    .bulle-projet:hover{
+        cursor: crosshair;
+
+        transform: scale(1.05);
+    }
+
+
+    .bulle-projet{
+        transition: 0.5s ease-in-out;
+        color: white;
+        justify-items: center;
+        text-align: center;
+        margin: 5vh;
+        width: 100%;
+    }
+
+    .deployment{
+        color: orange;
+
+        background-image:none;
+        background-attachment: initial;
+        background-size: initial ;
+
+        -webkit-text-fill-color: orange;
+        -webkit-background-clip: initial;
+    }
+    .offline{
+        color: red;
+
+        background-image:none;
+        background-attachment: initial;
+        background-size: initial ;
+
+        -webkit-text-fill-color: red;
+        -webkit-background-clip: initial;
+    }
+    .online{
+        color: green;
+
+        background-image:none;
+        background-attachment: initial;
+        background-size: initial ;
+
+        -webkit-text-fill-color: green;
+        -webkit-background-clip: initial;
+    }
+
+    /*###############################################################*/
+    /*{{{{{{{{################### Contact ###########################*/
+
+    .contac{
+        width: 50%;
+        height: 80vh;
+        margin-top: 52vh;
+        justify-items: center;
+        color:sandybrown;
+        padding-top: 5%;
+    }
+    .contac h1{
+        font-size: 3em;
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    .contact-logo{
+        padding-top: 5%;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 80%;
+    }
+    .ligne-contact{
+        display: flex;
+        width: 50%;
+    }
+    .ligne-contact-last{
+        display: flex;
+        margin-top: 5%;
+        width: 12%;
+    }
+    .ligne-contact a{
+        width: 100%;
+        height: 100%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 15%;
+    }
+    .ligne-contact img{
+        width: 100%;
+    }
+    #content-holder{
+        opacity: 0%;
+    }
+
+    .logo-img:hover{
+        transform: rotateY(360deg);
+    }
+    .logo-img{
+        transition: 1.5s  ;
+        transform: rotateY(0deg);
+    }
+    /*###############################################################*/
+    /*##############################################################################*/
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+    /*####################### RESET ##################################*/
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body, html {
+        height: 100%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    a, a:hover, a:visited, a:active {
+        color: inherit;
+        text-decoration: none;
+    }
+    p{
+        letter-spacing: 0.2vw;
+    }
+
+    body {
+        /*enlever les scrollbar */
+        -ms-overflow-style: none;  /* IE et Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    /*#############################################################################*/
+    /*####################### PAGE DE CHARGEMENT ##################################*/
+
+    .chargement{
+        text-align: center;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5em;
+        z-index: 99999;
+    }
+
+    /*#############################################################################*/
+
+    /*################################ MENU #######################################*/
+
+    nav{
+        background: rgba(0,0,0,0.8);
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 20%;
+        height: 100vh;
+        max-height: 300vh;
+        transform: translate3d(130%, 0, 0);
+        transition: transform 1.5s ease;
+        z-index: 1;
+
+    }
+    nav:hover{
+        cursor: url('../images/cu4.png'),pointer;
+    }
+    .avance{
+        transform: translate3d(105%, 0, 0);
+        transition: transform 1.5s ease;
+    }
+    /*#################### Boutton Croix menu #######################*/
+
+    .croix-menu{
+        position: fixed;
+        top: 5vh;
+        right: 5vh;
+        width: 5vh;
+        height: 1vh;
+        z-index: 20;
+    }
+    .croix-menu:hover{
+        transition: 1ms;
+    }
+    .croix-menu:hover .barre-haut{
+        transform: rotate(180deg) ;
+    }
+    .croix-menu:hover .barre-bas{
+        transform: rotate(180deg) ;
+    }
+    .barre-haut{
+        -webkit-transition: 0.70s;
+        -moz-transition: 0.70s;
+        -ms-transition: 0.70s;
+        -o-transition: 0.70s;
+        transition: 0.70s;
+        width: 100%;
+        height: 40%;
+        background-color: black;
+        margin-bottom: 0.5vh;
+
+    }
+    .barre-bas{
+
+        -webkit-transition: 0.70s;
+        -moz-transition: 0.70s;
+        -ms-transition: 0.70s;
+        -o-transition: 0.70s;
+        transition: 0.70s;
+        width: 100%;
+        height: 40%;
+        background-color: black;
+
+    }
+
+    .clicked{
+        -webkit-transition: 0.70s;
+        -moz-transition: 0.70s;
+        -ms-transition: 0.70s;
+        -o-transition: 0.70s;
+        -webkit-transform: rotate(405deg) translate(0,0.5vh);
+        -moz-transform: rotate(405deg) translate(0,0.5vh);
+        -o-transform: rotate(405deg) translate(0,0.5vh);
+        -ms-transform:rotate(405deg) translate(0,0.5vh);
+        transition: 0.70s;
+        transform: rotate(405deg) translate(0,0.5vh);
+        background-color: sandybrown;
+    }
+    .clicked2{
+        -webkit-transition: 0.70s;
+        -moz-transition: 0.70s;
+        -ms-transition: 0.70s;
+        -o-transition: 0.70s;
+        -webkit-transform: rotate(-45deg) translate(0,-0.5vh);
+        -moz-transform: rotate(-45deg) translate(0,-0.5vh);
+        -o-transform: rotate(-45deg) translate(0,-0.5vh);
+        -ms-transform:rotate(-45deg) translate(0,-0.5vh);
+        transition: 0.70s;
+        transform: rotate(-45deg) translate(0,-0.5vh);
+        background-color: sandybrown;
+
+    }
+
+    /*###############################################################*/
+    /*################### lien du menu ouvert #######################*/
+
+    #liens-menu{
+        display: flex;
+        width: 14%;
+        font-size: 1.5em;
+        flex-direction: column;
+        padding-top: 15%;
+        overflow: hidden;
+        text-align: center;
+    }
+    #liens-menu a{
+        color: sandybrown;
+        margin-bottom: 5vh;
+    }
+    #liens-menu a:hover{
+        cursor: url('../images/cu4.png'),pointer;
+
+    }
+
+    .span-lien{
+        letter-spacing: 0;
+    }
+    .span-lien span {
+        overflow: hidden;
+        transition: transform 150ms ease-in-out;
+        transform-origin: bottom left;
+        display: inline-block;
+        transform: rotate(0deg);
+    }
+    .span-lien:hover span {
+        overflow: hidden;
+        transform: rotate(8deg);
+    }
+    .span-lien:hover span:nth-child(1) {
+        transition-delay: 0ms;
+    }
+    .span-lien:hover span:nth-child(2) {
+        transition-delay: 100ms;
+    }
+    .s:hover span:nth-child(3) {
+        transition-delay: 200ms;
+    }
+    .span-lien:hover span:nth-child(4) {
+        transition-delay: 300ms;
+    }
+    .span-lien:hover span:nth-child(5) {
+        transition-delay: 400ms;
+    }
+    .span-lien:hover span:nth-child(6) {
+        transition-delay: 500ms;
+    }
+    .span-lien:hover span:nth-child(7) {
+        transition-delay: 600ms;
+    }
+    .span-lien:hover span:nth-child(8) {
+        transition-delay: 700ms;
+    }
+    .span-lien:hover span:nth-child(9) {
+        transition-delay: 800ms;
+    }
+    .span-lien:hover span:nth-child(10) {
+        transition-delay: 900ms;
+    }
+    .span-lien:hover span:nth-child(11) {
+        transition-delay: 1000ms;
+    }
+    .span-lien:hover span:nth-child(12) {
+        transition-delay: 1100ms;
+    }
+
+    /*###############################################################*/
+    /*##############################################################################*/
+    /*####################### CONTENU DE LA PAGE ###################################*/
+    .ctn-centrer-colone{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .ctn{
+        /*marge de tout le contenu quand le menu est ouvert*/
+        transition: 1.5s margin-right;
+    }
+    .ctn-contoure-article{
+        filter: drop-shadow(0 0 0.5vh black);
+        background: rgba(0, 0, 0, 0.6);
+        border: 0.5vh solid sandybrown;
+    }
+    .margectn{
+        margin-right: 15vw;
+    }
+    /*############################# PARRALAX  #######################*/
+    .paral{
+        background-image: url("../images/home.jpg");
+        width: 100%;
+        height: 1000vh;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    /*###############################################################*/
+    /*################### TItre D'acceuil ###########################*/
+
+    .titre-acceuil{
+        align-content: center;
+        justify-content: center;
+        height: 100vh;
+        /*filter: drop-shadow(0 0 1vh black);*/
+        margin-bottom: 40vh;
+        width: 70%;
+        padding-top: 0%;
+        animation: 1s ease  me;
+    }
+    .titre-acceuil h1{
+        opacity: 1;
+        font-size: 5em;
+    }
+    .titre-acceuil h1,h2{
+        text-align: center;
+
+    }
+    .titre-acceuil h2{
+        padding-top: 5%;
+        font-size: 2em;
+    }
+    /*###############################################################*/
+    /*##################### Presentation  ###########################*/
+    .present{
+        width: 30%;
+        height: 89vh;
+    }
+
+    .present h1{
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        padding-top: 10%;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+        font-size: 3em;
+    }
+    .present p{
+        opacity: 1;
+    }
+
+
+    .flip-card {
+        perspective: 1000px; /* effet  3D */
+    }
+
+    /* le container du devant et derriere de la carte*/
+    .flip-card-inner {
+        color: white;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 1.5s;
+        transform-style: preserve-3d;
+    }
+
+    /* rotation de la carte au survol */
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(-180deg);
+    }
+    /*cacher les face quand la carte tourne*/
+    .flip-card:hover .flip-card-front{
+        visibility: hidden;
+    }
+    .flip-card:hover .flip-card-back{
+        -webkit-backface-visibility: visible; /* Safari */
+        backface-visibility:  visible;
+        visibility: visible;
+    }
+
+    /* Position des face avant et arriere */
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+    }
+
+    .flip-card-back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        color: white;
+        transform: rotateY(180deg);
+    }
+    .flip-card-back p{
+        padding-top: 5%;
+        font-size: 1.5em;
+    }
+    .top-flip-card-back{
+        margin-top: 10%;
+    }
+
+    .presentation-content{
+        padding-top: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .moi-image-card{
+
+        width: auto;
+        height: 60vh;
+    }
+    @keyframes me {
+        from { padding-top: 25%;
+            opacity: 0;
+        }
+        to   { padding-top: 0%;
+            opacity: 1;
+        }
+    }
+    .text-justify{
+        width: 80%;
+        text-align: center;
+    }
+    /*###############################################################*/
+    /*########################## Parcours ###########################*/
+    .parco{
+        margin-top: 101vh;
+        width: 69%;
+        height: 99vh;
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .parco h1{
+        width: 100%;
+        height: 10%;
+        padding-top: 5%;
+        margin: 0;
+        font-size: 3em;
+    }
+    .parco h1, .parco h2, .parco p {
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+    }
+
+    .parco .pro,.scol{
+        padding-top: 2%;
+        width: 50%;
+        height: 90%;
+    }
+
+    .pro-chemin{
+        width: 90%;
+        height: 75%;
+        padding: 3% 0 0 10%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pro-chemin2{
+        border-left: 1px solid sandybrown;
+    }
+    .pro-chemin-contenu{
+        height: 24%;
+    }
+    .pro-chemin-contenu-img{
+        width: 25%;
+    }
+    .pro-chemin-contenu-text{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        padding-left: 5%;
+        width: 65%;
+    }
+    .pro-chemin-contenu p{
+        font-size: 0.90em;
+        text-align: justify;
+    }
+    .pro-chemin-contenu img{
+        height: 100%;
+    }
+    .scol-chemin{
+        width: 90%;
+        height: 75%;
+        padding:  0 0 0 10%;
+        display: flex;
+        flex-wrap: wrap;
+        border-left: 1px solid sandybrown;
+    }
+    .scol-chemin-contenu{
+        width: 45%;
+        height: 32.5%;
+    }
+    .scol-chemin-contenu img{
+        width: 80%;
+        height: 50%;
+    }
+    .scol-chemin-contenu-img{
+        display: flex;
+        align-items: center;
+        width: 25%;
+    }
+    .scol-chemin-contenu-text{
+        display: flex;
+        align-items: center;
+        width: 65%;
+    }
+
+    .scol-chemin-contenu p{
+        font-size: 1em;
+        text-align: left;
+    }
+    /*###############################################################*/
+    /*########################## Services ###########################*/
+
+    .servic{
+        margin-top: 101vh;
+        width: 72%;
+        height: 90vh;
+        color: sandybrown;
+        padding: 0 2% 0 2%;
+    }
+    .servic h1{
+        font-size: 3em;
+        padding-top: 3%;
+        text-align: center;
+    }
+    .servic h1,.servic h2,.servic p {
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    .service{
+        display: flex;
+        text-align: center;
+        justify-items: center;
+    }
+    .servic h2{
+        font-size: 1.7em;
+        padding: 0 10% 0 10%;
+        text-align: center;
+    }
+    .servic img{
+        width: 80%;
+    }
+    .servic p{
+        justify-items: center;
+        padding: 5%;
+    }
+    .service-contenu-expli{
+        transition: transform 1s;
+        margin-top:10%;
+    }
+    .service-contenu-expli:hover{
+        transform: scale(1.05);
+    }
+    .service-contenu{
+        padding-top: 5%;
+        width: 100%;
+    }
+    .service-contenu-expli{
+        border-left: 1px solid sandybrown;
+        border-right: 1px solid sandybrown;
+    }
+    /*###############################################################*/
+    /*########################### Project ###########################*/
+    .ligne{
+        width: 100%;
+        height: 72vh;
+        display: flex;
+
+    }
+    .projet{
+        margin-top: 50vh;
+        width: 72%;
+        height: 149vh;
+    }
+    .bulle-projet h1,p,li,ul{
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    .bulle-projet img{
+        width: 20vw;
+        height: 20vh;
+        padding-top: 8%;
+    }
+
+    .bulle-projet h1{
+        padding-top: 4%;
+    }
+    .bulle-projet p{
+        width: 80%;
+        padding-top: 4%;
+    }
+    .bulle-projet ul{
+        padding-top: 4%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .bulle-projet li{
+
+        list-style: none;
+        margin-right: 1vw;
+    }
+    .bulle-projet:hover{
+        cursor: crosshair;
+
+        transform: scale(1.05);
+    }
+
+
+    .bulle-projet{
+        transition: 0.5s ease-in-out;
+        color: white;
+        justify-items: center;
+        text-align: center;
+        margin: 5vh;
+        width: 100%;
+    }
+
+    .deployment{
+        color: orange;
+
+        background-image:none;
+        background-attachment: initial;
+        background-size: initial ;
+
+        -webkit-text-fill-color: orange;
+        -webkit-background-clip: initial;
+    }
+    .offline{
+        color: red;
+
+        background-image:none;
+        background-attachment: initial;
+        background-size: initial ;
+
+        -webkit-text-fill-color: red;
+        -webkit-background-clip: initial;
+    }
+    .online{
+        color: green;
+
+        background-image:none;
+        background-attachment: initial;
+        background-size: initial ;
+
+        -webkit-text-fill-color: green;
+        -webkit-background-clip: initial;
+    }
+
+    /*###############################################################*/
+    /*{{{{{{{{################### Contact ###########################*/
+
+    .contac{
+        width: 50%;
+        height: 80vh;
+        margin-top: 52vh;
+        justify-items: center;
+        color:sandybrown;
+        padding-top: 5%;
+    }
+    .contac h1{
+        font-size: 3em;
+        background-image: url("../images/home.jpg");
+        background-attachment: fixed;
+        background-size: cover ;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    .contact-logo{
+        padding-top: 5%;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 80%;
+    }
+    .ligne-contact{
+        display: flex;
+        width: 50%;
+    }
+    .ligne-contact-last{
+        display: flex;
+        margin-top: 5%;
+        width: 12%;
+    }
+    .ligne-contact a{
+        width: 100%;
+        height: 100%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 15%;
+    }
+    .ligne-contact img{
+        width: 100%;
+    }
+    #content-holder{
+        opacity: 0%;
+    }
+
+    .logo-img:hover{
+        transform: rotateY(360deg);
+    }
+    .logo-img{
+        transition: 1.5s  ;
+        transform: rotateY(0deg);
+    }
+    /*###############################################################*/
+    /*##############################################################################*/
+
+}
